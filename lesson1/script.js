@@ -14,5 +14,7 @@ function myFunction() {
 let admin = ''
 let name = 'Василий'
 admin = name
+
+// Сделано просто для примера вывода через alter
 alert(`Переменная admin = ${admin}`)
 alert(`JS-выражение 1000 + "108" = ${1000 + "108"}`)
