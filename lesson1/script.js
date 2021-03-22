@@ -1,3 +1,4 @@
+"use strict";
 function returnTc(tc) {
     let tf = (9 / 5) * Number(tc) + 32
     return tf
