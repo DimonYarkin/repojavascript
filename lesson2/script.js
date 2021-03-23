@@ -1,4 +1,5 @@
-//1. Дан код:
+
+
 var a = 1, b = 1, c, d;
 let body = document.body;
 var div = document.createElement("div");
