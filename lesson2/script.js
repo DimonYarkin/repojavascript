@@ -154,5 +154,35 @@ textInner += `<p>Введите операцию (+,-,* или /): <input type =
 textInner += `<p id="result">Результат</p><br>`
 textInner += `<button type="button" onclick="onClickButton()">Вычислить выражение</button>`
 
+textInner += `<h3>7. *Сравнить null и 0. Попробуйте объяснить результат.</h3>`
+
+function funcNull() {
+    return null == 0
+}
+
+textInner += `<p> Результат сравнения ${funcNull()}</p><br>`
+textInner += `<p> Для нестрогого равенства == значений undefined и null действует особое правило: 
+эти значения ни к чему не приводятся, они равны друг другу и не равны ничему другому. Поэтому (2) null == 0 ложно.</p>`
+
+textInner += `<h3>8. *С помощью рекурсии организовать функцию возведения числа в степень. <br>
+Формат: function power(val, pow), где val – заданное число, pow – степень.</h3>`
+
+function power(val, pow) {
+    if (pow === 1) return val
+    if (pow != 1)  return (val * power(val, pow - 1))
+}
+
+function onClickButtonpower() {
+    let val = +document.getElementById("val").value
+    let pow = +document.getElementById("pow").value
+
+    document.getElementById("resultpower").innerHTML = `Результат = ${power(val, pow)} `
+}
+
+
+textInner += `<p>Введите число: <input type = "text" id= "val"><br></p>`
+textInner += `<p>Введите степень: <input type = "text" id= "pow"><br></p>`
+textInner += `<p id="resultpower">Результат</p><br>`
+textInner += `<button type="button" onclick="onClickButtonpower()">Возвести в степень</button>`
 
 div.innerHTML = textInner
