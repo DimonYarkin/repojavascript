@@ -108,12 +108,12 @@ function minusab(a, b) {
     return a - b;
 }
 
-function divab (a, b) {
+function divab(a, b) {
     return a / b;
 }
 
-function multab (a, b) {
-    return a + b;
+function multab(a, b) {
+    return a * b;
 }
 
 textInner += `<p> Проверка результата выполнения функций.<br>
@@ -129,10 +129,10 @@ textInner += `<h3>6. Реализовать функцию с тремя пар�
 
 function mathOperation(arg1, arg2, operation) {
     switch (operation) {
-        case '+': return Number(arg1)+Number(arg2)
-        case '-': return Number(arg1)-Number(arg2)
-        case '*': return Number(arg1)*Number(arg2)
-        case '/': return Number(arg1)/Number(arg2)
+        case '+': return summab(Number(arg1),Number(arg2))
+        case '-': return minusab(Number(arg1),Number(arg2))
+        case '*': return multab(Number(arg1),Number(arg2))
+        case '/': return divab(Number(arg1),Number(arg2))
         default: return 'Операция не определена'
 
     }
